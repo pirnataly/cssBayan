@@ -1,5 +1,10 @@
-body {
+html{
     font-size: 10px;
+}
+
+
+body {
+
     color: black;
     }
 ul {
@@ -11,33 +16,35 @@ li{
 
 .wrapper{
     background: beige;
-    min-width: 30em;
-    max-width: 100em;
-
+    min-width: 30rem;
+    max-width: 90rem;
     margin: 0 auto;
 }
 
 .accordion {
+
     background-color: pink;
-    min-width:25em;
-    max-width: 80em;
+    min-width:25rem;
+    max-width: 80rem;
     min-height: 100vh;
     margin: 0 auto;
-    padding: 3em 2em;
+    padding: 3rem 2rem;
 }
 .accordion:hover *{
    visibility: visible;
-
+    color: white;
 }
 
 .accordion__item {
-    line-height: 250%;
+display: flex;
+justify-content: space-between;
+    /*padding-left: 1em;*/
     font-weight: 700;
-    font-size: 3em;
-    min-width: 100%;
+    font-size: 3rem;
+    /*min-width: 100%;*/
     min-height: 10%;
     background: aquamarine;
-    margin-bottom: 3em;
+    margin-bottom: 3rem;
 }
 
 .accordion__item >*{
@@ -48,31 +55,43 @@ li{
 }
 
 .accordion__title{
-    display: inline-block;
-    min-width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    min-width: 100%;
 }
 
 .accordion__ico{
-    display: inline-block;
-    visibility: hidden;
+    display: block;
+
+    vertical-align: center;
+    /*visibility: hidden;*/
+    margin-left: auto;
+    margin-right: 2rem;
     border-style: solid;
-    border-width: 18px 9px 0 9px;
+    border-width: 1.8rem 0.9rem 0 0.9rem;
     border-color: #1c1d1f transparent transparent transparent;
 }
 .accordion__meme{
     background: url("./assets/mem1.jpg") center no-repeat;
-    background-size: auto 100%;
-   min-width:100%;
-   min-height: 9em;
-    height:100%;
+    background-size: auto 50%;
+    min-width:100%;
+    min-height: 9rem;
+    height:40rem;
     margin: 0 auto;
     display: none;
 }
 
-.accordion__item > input[type="radio"]:checked ~ .accordion__meme{
+.accordion__item >input[type="radio"]:checked +.accordion__title >.accordion__meme {
     display: block;
-    }
-.accordion__item > input[type="radio"]:checked ~.accordion__ico{
-    border-width: 0 9px 18px 9px;
+}
+
+.accordion__item > input[type="radio"]:checked~.accordion__title {
+       color:white;
+}
+.accordion__item:hover >.accordion__title >.accordion__meme{
+    display: block;
+}
+.accordion__item:hover >.accordion__title >.accordion__ico, .accordion__item >input[type="radio"]:checked +.accordion__title >.accordion__ico{
+    border-width: 0 0.9rem 1.8rem 0.9rem;
     border-color: transparent transparent #1c1d1f transparent;
 }
