@@ -226,6 +226,7 @@ li {
 
     .accordion__item {
         font-size: 1.625rem;
+        padding-bottom: 0;
     }
 
     .accordion__ico {
