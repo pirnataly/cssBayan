@@ -1,27 +1,26 @@
-
 body {
-    margin:0;
-    margin-top: -1.5rem;
+    margin: -1.5rem 0 0 0;
     color: #bf8a02;
-    }
+}
+
 .heading {
-    color:black;
+    color: black;
     font-size: 2.25rem;
-    min-width:15.625rem;
+    min-width: 15.625rem;
     max-width: 50rem;
     padding-left: 3.75rem;
     padding-top: 0.625rem;
 }
 
-
 ul {
-padding:0;
+    padding: 0;
 }
-li{
+
+li {
     list-style: none;
 }
 
-.wrapper{
+.wrapper {
     background: beige;
     min-width: 18.75rem;
     max-width: 56.25rem;
@@ -30,45 +29,43 @@ li{
 
 .accordion {
     background-color: beige;
-    min-width:15.625rem;
+    min-width: 15.625rem;
     max-width: 50rem;
     min-height: 100vh;
     max-height: 100vh;
     margin: 0 auto;
     padding: 1.875rem 1.25rem;
-
 }
-.accordion:hover *{
-   visibility: visible;
+
+.accordion:hover * {
+    visibility: visible;
     color: black;
 }
 
 .accordion__item {
-display: flex;
-justify-content: space-between;
+    display: flex;
+    justify-content: space-between;
     border-top: 0.0625rem solid lightgray;
     font-weight: 700;
     font-size: 1.875rem;
     min-height: 10%;
     background: beige;
-    margin-bottom: 1.875rem;
+    padding-bottom: 1.875rem;
     max-width: 100%;
-
 }
-
 
 .accordion__input {
     appearance: none;
 }
 
-.accordion__title{
+.accordion__title {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     min-width: 100%;
 }
 
-.accordion__ico{
+.accordion__ico {
     display: block;
     visibility: hidden;
     margin-left: auto;
@@ -78,110 +75,109 @@ justify-content: space-between;
     border-color: #1c1d1f transparent transparent transparent;
     transition: all 1000ms ease-in-out;
 }
-.accordion__meme{
-    min-width:100%;
+
+.accordion__meme {
+    min-width: 100%;
     min-height: 5.625rem;
-    height:15.625rem;
+    height: 15.625rem;
     margin: 0 auto;
     display: none;
     max-width: 100%;
-
 }
+
 @keyframes size-change {
-    0%{
+    0% {
         background-size: 20% auto;
     }
-    10%{
+    10% {
         background-size: 22% auto;
     }
-    20%{
+    20% {
         background-size: 24% auto;
     }
-    30%{
+    30% {
         background-size: 26% auto;
     }
-    40%{
+    40% {
         background-size: 28% auto;
     }
-    50%{
+    50% {
         background-size: 30% auto;
     }
-    60%{
+    60% {
         background-size: 31% auto;
     }
-    70%{
+    70% {
         background-size: 32% auto;
     }
-    80%{
+    80% {
         background-size: 33% auto;
     }
-    90%{
+    90% {
         background-size: 34% auto;
     }
-    100%{
+    100% {
         background-size: 35% auto;
     }
-
 }
 
 .first {
-    background:beige url("./assets/About aliens.jpg") center no-repeat;
+    background: beige url("./assets/About aliens.jpg") center no-repeat;
     background-size: auto 15.625rem;
     animation: size-change 300ms;
-
-
 }
+
 .second {
     background: url("./assets/About face.jpg") center no-repeat;
     background-size: auto 15.625rem;
     animation: size-change 300ms;
-
 }
+
 .third {
     background: url("./assets/About_extrim.jpg") center no-repeat;
     background-size: auto 15.625rem;
     animation: size-change 300ms;
 }
-.forth{
+
+.forth {
     animation: size-change 300ms;
     background: url("./assets/About hedgehog.jpg") center no-repeat;
     background-size: auto 15.625rem;
 }
+
 .fifth {
     animation: size-change 300ms;
     background: url("./assets/About soul.jpg") center no-repeat;
     background-size: auto 15.625rem;
 }
 
-
-.accordion__item >input[type="radio"]:checked +.accordion__title >.accordion__meme {
-   display: block;
+.accordion__item > input[type="radio"]:checked + .accordion__title > .accordion__meme {
+    display: block;
 }
 
-
-
-.accordion__item > input[type="radio"]:checked~.accordion__title {
-       color:black;
+.accordion__item > input[type="radio"]:checked ~ .accordion__title {
+    color: black;
 }
 
-.accordion__item:active *{
+.accordion__item:active * {
     color: #bf8a02;
-    opacity:80%;
-   }
+    opacity: 80%;
+}
 
-
-
-.accordion__item > input[type="radio"]:active +.accordion__title >.accordion__ico{
+.accordion__item > input[type="radio"]:active + .accordion__title > .accordion__ico {
     border-color: transparent transparent #bf8a02 transparent;
 }
+
 @media (hover: hover) {
-    .accordion__item >*{
+    .accordion__item>*, .accordion__item {
         cursor: pointer;
     }
+
     .accordion__item:hover > .accordion__title > .accordion__meme {
         display: block;
     }
-    .accordion__item:hover >.accordion__title >.accordion__ico, .accordion__item >input[type="radio"]:checked +.accordion__title >.accordion__ico{
+
+    .accordion__item:hover > .accordion__title > .accordion__ico, .accordion__item > input[type="radio"]:checked + .accordion__title > .accordion__ico {
         border-width: 0 0.5625rem 1.125rem 0.5625rem;
         border-color: transparent transparent #1c1d1f transparent;
     }
@@ -193,7 +189,6 @@ justify-content: space-between;
         font-size: 2.125rem;
         padding-left: 1.875rem;
     }
-
 
     .accordion__title {
         line-height: 200%;
@@ -207,39 +202,40 @@ justify-content: space-between;
     .accordion__ico {
         margin-right: 0.625rem;
     }
-    .accordion__item > input[type="radio"]:not(:checked)~.accordion__title {
+
+    .accordion__item > input[type="radio"]:not(:checked) ~ .accordion__title {
         color: #bf8a02;
     }
 
 }
-    @media (max-width: 320px) {
-        .heading {
-            font-size: 2rem;
-            padding-left: 1.875rem;
-            text-align: center;
-        }
 
-        .accordion {
-            padding-top: 0.625rem;
-        }
-
-        .accordion__title {
-            line-height: 150%;
-        }
-
-        .accordion__item {
-            font-size: 1.625rem;
-
-        }
-
-        .accordion__ico {
-            margin-right: 0.625rem;
-        }
-
-        .first, .second, .third, .forth, .fifth {
-            background-size: auto 12.5rem;
-        }
+@media (max-width: 320px) {
+    .heading {
+        font-size: 2rem;
+        padding-left: 1.875rem;
+        text-align: center;
     }
+
+    .accordion {
+        padding-top: 0.625rem;
+    }
+
+    .accordion__title {
+        line-height: 150%;
+    }
+
+    .accordion__item {
+        font-size: 1.625rem;
+    }
+
+    .accordion__ico {
+        margin-right: 0.625rem;
+    }
+
+    .first, .second, .third, .forth, .fifth {
+        background-size: auto 12.5rem;
+    }
+}
 
 
 
